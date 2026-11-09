@@ -35,12 +35,36 @@
 							if (selectedIndex < 0) return;
 
 							const patch = patchInfo.patches[selectedIndex];
-							const link = document.createElement('a');
-							link.href = `./patches/${patch.file}`;
-							link.download = patch.file.split('/').pop();
-							document.body.appendChild(link);
-							link.click();
-							document.body.removeChild(link);
+							const fileName = patch.file.split('/').pop();
+							const failed = err => {
+								console.error(err);
+								RomPatcherWeb.setErrorMessage('Could not download the patch', 'error');
+							};
+
+							fetch(patchInfo.file)
+								.then(res => res.blob())
+								.then(zipBlob => {
+									zip.createReader(new zip.BlobReader(zipBlob), reader => {
+										reader.getEntries(entries => {
+											const entry = entries.find(e => e.filename.split('/').pop() === fileName);
+											if (!entry) {
+												reader.close();
+												return failed(fileName + ' not found in ' + patchInfo.file);
+											}
+											entry.getData(new zip.BlobWriter('application/octet-stream'), blob => {
+												reader.close();
+												const link = document.createElement('a');
+												link.href = URL.createObjectURL(blob);
+												link.download = fileName;
+												document.body.appendChild(link);
+												link.click();
+												document.body.removeChild(link);
+												setTimeout(() => URL.revokeObjectURL(link.href), 10000);
+											});
+										});
+									}, failed);
+								})
+								.catch(failed);
 						};
 					})
 					.catch(err => console.error(err));
