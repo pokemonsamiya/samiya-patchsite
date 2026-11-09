@@ -1,0 +1,1 @@
+Pokemon Samiya is a romhack of Emerald Version that aims to bring a Zelda-like experience into the world of Pokemon

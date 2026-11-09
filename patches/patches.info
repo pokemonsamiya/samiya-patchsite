@@ -1,0 +1,11 @@
+{
+  "file": "./patches/patch.zip",
+  "patches": [
+    {
+      "file": "pokeemerald-samiya_0.1.26.bps",
+      "name": "Pokémon Samiya v0.1.26",
+      "description": "",
+      "outputName": "Pokémon Samiya v0.1.26"
+    }
+  ]
+}

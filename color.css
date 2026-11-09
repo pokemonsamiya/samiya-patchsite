@@ -1,0 +1,161 @@
+:root {
+    --page-title-color: white;
+    --page-bg-light: #fbeab0;
+    --page-bg-color: #d4a72c;
+    --page-bg-color-darker: #b07d12;
+    --page-bg-color-darker-2: #7a560c;
+    --page-rom-patcher-link-color: white;
+}
+
+@font-face {
+    font-family: "Pergamon Rough";
+    src: url("assets/fonts/OTPergamon-RoughRegular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Pergamon Rough", serif;
+}
+
+ul {
+    line-height: 2em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.block {
+    width: 100%;
+    max-width: 640px;
+    padding: 30px !important;
+    border-radius: 20px !important;
+    background-color: #fffaeb;
+}
+
+.block button {
+    background-color: var(--page-bg-color-darker) !important;
+    font-weight: bold;
+}
+
+.block button:not(:disabled):hover {
+    background-color: var(--page-bg-color-darker-2) !important;
+}
+
+.base-rom {
+    padding-bottom: 10px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 10px;
+    color: black !important;
+    background-image: url(./assets/bg.png);
+    background-attachment: fixed;
+    background-position: center;
+    image-rendering: pixelated;
+    background-size: cover;
+}
+
+a {
+    color: var(--page-bg-color-darker);
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: var(--page-bg-color-darker-2);
+}
+
+h4 {
+    color: #2f5a1f;
+    padding-left: 15px;
+}
+
+.contribution-detail,
+.section em {
+    font-style: normal;
+    color: #8a7a55;
+}
+
+#info,
+#credits,
+#download {
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.section h2 {
+    color: var(--page-bg-color-darker);
+}
+
+.section hr {
+    align-self: stretch;
+    border: none;
+    border-top: 2px solid var(--page-bg-color-darker);
+    margin: 10px 0;
+}
+
+#info .section,
+#credits .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 10px;
+    padding: 30px;
+}
+
+.block-title {
+    width: 100%;
+    padding: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: var(--page-bg-color-darker-2);
+    background: var(--page-bg-light);
+}
+
+#download #rom-patcher-container {
+    width: 100%;
+    padding: 30px;
+    background-color: transparent;
+}
+
+#rom-patcher-powered a {
+    text-shadow:
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
+}
