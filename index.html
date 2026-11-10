@@ -92,6 +92,11 @@
 		<div class="section"></div>
 	</div>
 
+	<div id="core-team" class="block">
+		<h2 class="block-title">Core Team</h2>
+		<div class="section"></div>
+	</div>
+
 	<div id="download" class="block">
 		<h2 class="block-title">Download</h2>
 
@@ -104,28 +109,20 @@
 			The rest of elements are informative and can be removed, though it's recommended to keep them for a better user experience.
 		-->
 		<div id="rom-patcher-container">
-			<span class="base-rom text-mono text-muted">
-				Base ROM: {base}
-			</span>
-
 			<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-rom">
-				<div class="text-right"><label for="rom-patcher-input-file-rom" data-localize="yes">ROM file:</label></div>
+				<div class="text-right"><label for="rom-patcher-input-file-rom">Base Emerald ROM:</label></div>
 				<div class="rom-patcher-container-input">
 					<input type="file" id="rom-patcher-input-file-rom" class="empty" disabled />
 				</div>
 			</div>
 			<div class="margin-bottom text-selectable text-mono text-muted" id="rom-patcher-rom-info">
 				<div class="rom-patcher-row">
-					<div class="text-right">CRC32:</div>
+					<div class="text-right">Selected CRC32:</div>
 					<div class="text-truncate"><span id="rom-patcher-span-crc32"></span></div>
 				</div>
-				<div class="rom-patcher-row">
-					<div class="text-right">MD5:</div>
-					<div class="text-truncate"><span id="rom-patcher-span-md5"></span></div>
-				</div>
-				<div class="rom-patcher-row">
-					<div class="text-right">SHA-1:</div>
-					<div class="text-truncate"><span id="rom-patcher-span-sha1"></span></div>
+				<div class="rom-patcher-row" id="rom-patcher-row-patch-requirements">
+					<div class="text-right" id="rom-patcher-patch-requirements-type">Required CRC32:</div>
+					<div class="text-truncate" id="rom-patcher-patch-requirements-value"></div>
 				</div>
 				<div class="rom-patcher-row" id="rom-patcher-row-info-rom">
 					<div class="text-right">ROM:</div>
@@ -144,11 +141,6 @@
 				<div class="text-right text-mono text-muted" data-localize="yes">Description:</div>
 				<div class="text-truncate" id="rom-patcher-patch-description"></div>
 			</div>
-			<div class="rom-patcher-row margin-bottom text-selectable text-mono text-muted"
-				id="rom-patcher-row-patch-requirements">
-				<div class="text-right text-mono" id="rom-patcher-patch-requirements-type">ROM requirements:</div>
-				<div class="text-truncate" id="rom-patcher-patch-requirements-value"></div>
-			</div>
 
 			<div class="text-center" id="rom-patcher-row-apply">
 				<div id="rom-patcher-row-error-message" class="margin-bottom"><span id="rom-patcher-error-message"></span>
@@ -156,39 +148,52 @@
 				<button id="rom-patcher-button-apply" data-localize="yes" disabled>Apply patch</button>
 				<button id="rom-patcher-button-download" data-localize="yes" disabled>Download patch</button>
 			</div>
-			<br />
-			<div id="external-hack-link">
-				<div class="smaller-external-button" id="discordButton">
-					<a href="" target="_blank">
-						<img src="./assets/images/externals/Discord-Symbol-Blurple.png" loading="lazy" />
-					</a>
-				</div>
-
-				<div class="smaller-external-button" id="githubButton">
-					<a href="" target="_blank">
-						<img src="./assets/images/externals/github-mark.png" loading="lazy" />
-					</a>
-				</div>
-
-				<div class="smaller-external-button" id="pokecommunityButton">
-					<a href="" target="_blank">
-						<img src="./assets/images/externals/PokéCommunity_Logo_2014.png" loading="lazy" />
-					</a>
-				</div>
-
-				<div class="smaller-external-button" id="redditButton">
-					<a href="" target="_blank">
-						<img src="./assets/images/externals/Reddit_Icon_FullColor.png" loading="lazy" />
-					</a>
-				</div>
-			</div>
-
 		</div>
 	</div>
 
-	<div id="credits" class="block">
-		<h2 class="block-title">Credits</h2>
-		<div class="section"></div>
+	<div id="full-credits" class="block collapsible">
+		<h2 class="block-title">Full Credits</h2>
+		<div class="collapsible-body" id="full-credits-body">
+			<div class="collapsible-inner">
+				<div class="section"></div>
+			</div>
+		</div>
+		<button type="button" class="collapsible-toggle" aria-expanded="false" aria-controls="full-credits-body"
+			aria-label="Show full credits">
+			<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+				<path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+					stroke-linejoin="round" />
+			</svg>
+		</button>
+	</div>
+
+	<div id="links" class="block">
+		<h2 class="block-title">Links</h2>
+		<div id="external-hack-link">
+			<div class="smaller-external-button" id="discordButton">
+				<a href="" target="_blank">
+					<img src="./assets/images/externals/Discord-Symbol-Blurple.png" loading="lazy" />
+				</a>
+			</div>
+
+			<div class="smaller-external-button" id="githubButton">
+				<a href="" target="_blank">
+					<img src="./assets/images/externals/github-mark.png" loading="lazy" />
+				</a>
+			</div>
+
+			<div class="smaller-external-button" id="pokecommunityButton">
+				<a href="" target="_blank">
+					<img src="./assets/images/externals/PokéCommunity_Logo_2014.png" loading="lazy" />
+				</a>
+			</div>
+
+			<div class="smaller-external-button" id="redditButton">
+				<a href="" target="_blank">
+					<img src="./assets/images/externals/Reddit_Icon_FullColor.png" loading="lazy" />
+				</a>
+			</div>
+		</div>
 	</div>
 
 	<div id="rom-patcher-powered" class="text-center">
@@ -255,7 +260,18 @@
 		})();
 
 		loadMarkdown("./info.md", "info");
-		loadMarkdown("./credits.md", "credits");
+		loadMarkdown("./core-team.md", "core-team");
+		loadMarkdown("./full-credits.md", "full-credits");
+
+		document.querySelectorAll(".collapsible").forEach(block => {
+			const toggle = block.querySelector(".collapsible-toggle");
+			const title = block.querySelector(".block-title").textContent.trim().toLowerCase();
+			toggle.addEventListener("click", () => {
+				const open = block.classList.toggle("open");
+				toggle.setAttribute("aria-expanded", open);
+				toggle.setAttribute("aria-label", (open ? "Hide " : "Show ") + title);
+			});
+		});
 	</script>
 </body>
 

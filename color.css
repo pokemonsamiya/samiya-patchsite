@@ -107,8 +107,10 @@ h4 {
 }
 
 #info,
-#credits,
-#download {
+#core-team,
+#full-credits,
+#download,
+#links {
     padding: 0 !important;
     display: flex;
     flex-direction: column;
@@ -128,7 +130,8 @@ h4 {
 }
 
 #info .section,
-#credits .section {
+#core-team .section,
+#full-credits .section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -158,4 +161,74 @@ h4 {
         1px -1px 0 black,
         -1px 1px 0 black,
         1px 1px 0 black;
+}
+
+#links #external-hack-link {
+    padding: 12px 30px;
+}
+
+#links .smaller-external-button img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.collapsible {
+    overflow: hidden;
+}
+
+.collapsible-body {
+    display: grid;
+    grid-template-rows: 0fr;
+    width: 100%;
+    transition: grid-template-rows 0.35s ease;
+}
+
+.collapsible.open .collapsible-body {
+    grid-template-rows: 1fr;
+}
+
+.collapsible-inner {
+    min-height: 0;
+    overflow: hidden;
+}
+
+.collapsible-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 22px;
+    padding: 0;
+    border: none;
+    border-top: 1px solid color-mix(in srgb, var(--page-bg-color-darker) 20%, transparent);
+    color: var(--page-bg-color-darker-2);
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+.block button.collapsible-toggle:not(:disabled) {
+    background-color: var(--page-bg-light) !important;
+}
+
+.block button.collapsible-toggle:not(:disabled):hover,
+.block button.collapsible-toggle:not(:disabled):focus-visible {
+    background-color: color-mix(in srgb, var(--page-bg-light), var(--page-bg-color) 45%) !important;
+    outline: none;
+}
+
+.collapsible-toggle svg {
+    transition: transform 0.35s ease;
+}
+
+.collapsible.open .collapsible-toggle svg {
+    transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .collapsible-body,
+    .collapsible-toggle svg {
+        transition: none;
+    }
 }

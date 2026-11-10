@@ -5,7 +5,7 @@ window.TARP_CONFIG = {
   externalLinks: {
     discord: "https://discord.gg/XGQjtkFMnm",
     github: "https://github.com/pokemonsamiya/",
-    pokécommunity: "",
+    pokécommunity: "https://www.pokecommunity.com/threads/the-pit-v2-roguelite-style-hack.528423/",
     reddit: ""
   }
 };
