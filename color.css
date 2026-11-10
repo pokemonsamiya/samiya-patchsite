@@ -5,6 +5,15 @@
     --page-bg-color-darker: #b07d12;
     --page-bg-color-darker-2: #7a560c;
     --page-rom-patcher-link-color: white;
+    --page-text: #2a2418;
+    --page-muted: #8a7a55;
+    --page-panel: #fffaeb;
+    --page-input: #f6f0dc;
+    --page-outline: #a87a1e;
+    --page-rule: #d9b45a;
+    --page-blue: #2d5d9f;
+    --page-title-text: #634510;
+    --page-title-bg: linear-gradient(#fbe7a6, #ecc865);
 }
 
 @font-face {
@@ -47,7 +56,12 @@ ul {
     max-width: 640px;
     padding: 30px !important;
     border-radius: 20px !important;
-    background-color: #fffaeb;
+    background-color: var(--page-panel);
+    border: 2px solid var(--page-outline);
+    box-shadow:
+        0 2px 6px rgba(15, 25, 50, 0.25),
+        0 12px 30px rgba(15, 25, 50, 0.4);
+    overflow: hidden;
 }
 
 .block button {
@@ -69,8 +83,10 @@ body {
     justify-content: flex-start;
     align-items: center;
     row-gap: 10px;
-    color: black !important;
-    background-image: url(./assets/bg.png);
+    color: var(--page-text) !important;
+    background-image:
+        linear-gradient(rgba(12, 22, 45, 0.1), rgba(12, 22, 45, 0.1)),
+        url(./assets/bg.png);
     background-attachment: fixed;
     background-position: center;
     image-rendering: pixelated;
@@ -78,7 +94,7 @@ body {
 }
 
 a {
-    color: var(--page-bg-color-darker);
+    color: var(--page-blue);
     font-weight: bold;
 }
 
@@ -96,14 +112,26 @@ h3 {
 }
 
 h4 {
-    color: #2f5a1f;
+    color: var(--page-blue);
     padding-left: 15px;
+}
+
+summary {
+    color: #6b4c0a;
+    font-family: "Pergamon Rough", serif;
+    font-size: 1.17em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+details[open] > summary {
+    margin-bottom: 10px;
 }
 
 .contribution-detail,
 .section em {
     font-style: normal;
-    color: #8a7a55;
+    color: var(--page-muted);
 }
 
 #info,
@@ -120,12 +148,18 @@ h4 {
 
 .section h2 {
     color: var(--page-bg-color-darker);
+    font-size: 1.6em;
+}
+
+.section h3 {
+    color: #9a7016;
+    font-size: 1.3em;
 }
 
 .section hr {
     align-self: stretch;
     border: none;
-    border-top: 2px solid var(--page-bg-color-darker);
+    border-top: 2px solid var(--page-rule);
     margin: 10px 0;
 }
 
@@ -145,14 +179,21 @@ h4 {
     padding: 10px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    color: var(--page-bg-color-darker-2);
-    background: var(--page-bg-light);
+    color: var(--page-title-text);
+    background: var(--page-title-bg);
+    border-bottom: 2px solid var(--page-outline);
 }
 
 #download #rom-patcher-container {
     width: 100%;
     padding: 30px;
     background-color: transparent;
+    color: var(--page-text);
+}
+
+#rom-patcher-container input[type=file],
+#rom-patcher-container select {
+    background-color: var(--page-input);
 }
 
 #rom-patcher-powered a {
@@ -203,18 +244,18 @@ h4 {
     padding: 0;
     border: none;
     border-top: 1px solid color-mix(in srgb, var(--page-bg-color-darker) 20%, transparent);
-    color: var(--page-bg-color-darker-2);
+    color: var(--page-title-text);
     cursor: pointer;
     transition: background-color 0.15s;
 }
 
 .block button.collapsible-toggle:not(:disabled) {
-    background-color: var(--page-bg-light) !important;
+    background: var(--page-panel) !important;
 }
 
 .block button.collapsible-toggle:not(:disabled):hover,
 .block button.collapsible-toggle:not(:disabled):focus-visible {
-    background-color: color-mix(in srgb, var(--page-bg-light), var(--page-bg-color) 45%) !important;
+    background: color-mix(in srgb, var(--page-bg-light), var(--page-bg-color) 45%) !important;
     outline: none;
 }
 
@@ -230,5 +271,28 @@ h4 {
     .collapsible-body,
     .collapsible-toggle svg {
         transition: none;
+    }
+}
+
+.showcase {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    align-self: stretch;
+}
+
+.showcase img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    border: 2px solid var(--page-outline);
+    border-radius: 8px;
+    image-rendering: pixelated;
+}
+
+@media (max-width: 480px) {
+    .showcase {
+        grid-template-columns: 1fr;
     }
 }

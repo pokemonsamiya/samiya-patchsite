@@ -1,12 +1,12 @@
-## Creator
+## Creator   ~   **Archie**
 
-**Archie:** I do most of the code, scripting and mapping, some of the art, and a bit of everything!
+ I do most of the code, scripting and mapping, some of the art, and a bit of everything!
 
 ---
 
-## Co-Lead
+## Co-Lead   ~   **Nico** 
 
-**Nico:** Co-Lead Dev, Co-Lead Mapper, In Charge of Faron / Hebra
+Co-Lead Dev, Co-Lead Mapper, In Charge of Faron / Hebra
 
 ---
 

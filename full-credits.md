@@ -5,11 +5,12 @@
 - Romhacking Hideout / Expansion team *(`pokeemerald-expansion`)*
 
 ### Features / Code
-
-- Ghoulsash *(Quest log system)*
-- PSF *(Quest log system port)*
+- Ghoulsash *(Quest log system, UI Template)*
+- PSF *(Quest log system port, various small snips)*
 - RavePossum *(CI fixes & more)*
 - Wiz *(Tall grass pal. management)*
+- Sierra/Merrp/Xhyz *(DNS Code)*
+- Camgotay *(Water Animations, Various Features)*
 
 ### Mapping
 
@@ -17,9 +18,19 @@
 - Aio *(Great Sea Current Outline)*
 
 ### Graphics
+- Mudskip *(Regional Mon Edits, Nameplate UI Design, Various UI Influences, May Sprite)*
+- Blackfragrant *(Gen 3 Style NPC Designs, Some Tilesets)*
+- Eva *(Regional Mon Designs, Region Map Design, May Sprite)*
 - Leob0505 *(Various Zelda Inspired Graphics)*
 - RedSquidz *(Regional Mon Designs)*
 - Roger Wrightshoe *(Tilesets Graphics)*
+- Princess Phoenix *(Tilesets Graphics)*
+- alienor *(Tilesets Graphics)*
+- ekat99 *(Tilesets Graphics)*
+- Rahtak *(Tilesets Graphics)*
+- aveontrainer *(Tilesets Graphics)*
+- PMD/PokemonRanger *(Ripped Graphics)*
+- Phantom Hourglass/The Minish Cap *(Ripped Graphics)*
 
 ### Writing
 
