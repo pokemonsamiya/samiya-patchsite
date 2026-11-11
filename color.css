@@ -128,6 +128,39 @@ details[open] > summary {
     margin-bottom: 10px;
 }
 
+details > :not(summary) {
+    margin-left: 26px;
+}
+
+details h4 {
+    padding-left: 0;
+}
+
+details > h4 {
+    margin-top: 14px;
+}
+
+details > summary + h4 {
+    margin-top: 0;
+}
+
+details details {
+    margin-bottom: 8px;
+}
+
+details details > summary {
+    color: var(--page-blue);
+    font-size: 1em;
+}
+
+details details[open] > summary {
+    margin-bottom: 6px;
+}
+
+details details[open] {
+    margin-bottom: 18px;
+}
+
 .contribution-detail,
 .section em {
     font-style: normal;
@@ -152,7 +185,7 @@ details[open] > summary {
 }
 
 .section h3 {
-    color: #9a7016;
+    color: #7e5a0e;
     font-size: 1.3em;
 }
 
@@ -253,10 +286,16 @@ details[open] > summary {
     background: var(--page-panel) !important;
 }
 
-.block button.collapsible-toggle:not(:disabled):hover,
 .block button.collapsible-toggle:not(:disabled):focus-visible {
     background: color-mix(in srgb, var(--page-bg-light), var(--page-bg-color) 45%) !important;
     outline: none;
+}
+
+@media (hover: hover) {
+    .block button.collapsible-toggle:not(:disabled):hover {
+        background: color-mix(in srgb, var(--page-bg-light), var(--page-bg-color) 45%) !important;
+        outline: none;
+    }
 }
 
 .collapsible-toggle svg {
@@ -295,4 +334,18 @@ details[open] > summary {
     .showcase {
         grid-template-columns: 1fr;
     }
+}
+
+.coming-soon {
+    margin: 4px 0 18px;
+    padding: 10px 46px;
+    font-family: "Pergamon Rough", serif;
+    font-size: 2rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--page-title-text);
+    background: var(--page-title-bg);
+    border: 2px solid var(--page-outline);
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(15, 25, 50, 0.4);
 }

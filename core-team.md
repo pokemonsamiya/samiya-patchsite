@@ -1,30 +1,44 @@
-## Creator   ~   **Archie**
+## Creator  
 
- I do most of the code, scripting and mapping, some of the art, and a bit of everything!
+### **Archie**
+
+I do most of the code, scripting and mapping, some of the art, and a bit of everything!
 
 ---
 
-## Co-Lead   ~   **Nico** 
+## Co-Lead  
+
+### **Nico** 
 
 Co-Lead Dev, Co-Lead Mapper, In Charge of Faron / Hebra
 
 ---
 
-## Amazing Artists
+## Artists
 
-**Blackfragrant:** NPC and Tileset Artist
+### **Blackfragrant** 
 
-**Redsquidz:** Art Design, Regional Mon Graphics
+NPC and Tileset Artist
 
-**Mudskip:** Art Design, UI Art, Regional Mon Graphics
+### **Redsquidz** 
 
-**Eva:** Art Design, Region Map, Regional Mon Graphics
+Art Design, Regional Mon Graphics
+
+### **Mudskip** 
+
+Art Design, UI Art, Regional Mon Graphics
+
+### **Eva** 
+
+Art Design, Region Map, Regional Mon Graphics
 
 ---
 
-## Da Music
+## Music
 
-**Jordan:** Music Design, Zelda Song Covers
+### **Jordan** 
+
+Music Design, Zelda Song Covers
 
 ---
 
